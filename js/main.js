@@ -4,6 +4,17 @@ $(document).ready(() => {
       console.log(writelorem());
    });
    function writelorem() {
-      return ('Lorem ipsum dolor sit amet, consectetur adipiscing elit');
+      json_s = '{"name": "Molecule Man", "age": 29,"secretIdentity": "Dan Jukes"}';
+      $.ajax({
+         type: "POST",
+         data: { login: '1', password: '2' },
+         url: "test.php",
+         success: function (msg) {
+            alert(msg);
+         },
+         error: function (error) {
+            alert('error');
+         }
+      });
    }
 });
