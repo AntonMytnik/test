@@ -1,15 +1,13 @@
 $(document).ready(() => {
-   console.log('Hello World');
    $('nav').click(() => {
       writelorem();
    });
    function writelorem() {
-      json_s = '{"name": "Molecule Man", "age": 29,"secretIdentity": "Dan Jukes"}';
+      json_s = '{"name": "Jason", "age": 29,"secretIdentity": { "a": "123456", "b": "123456" } }';
       $.ajax({
+         url: "test.php",
          type: "POST",
          data: { json: json_s },
-         dataType: 'json',
-         url: "test.php",
          success: function (msg) {
             alert(msg);
          },

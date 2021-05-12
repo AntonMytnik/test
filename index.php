@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="/styles/main.css"/>
     <title>Document</title>
 </head>
-
+<style>
+    nav {
+        font-size: 55px;
+    }
+</style>
 <body>
     <nav>
         Click me

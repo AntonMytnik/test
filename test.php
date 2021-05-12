@@ -1,4 +1,5 @@
 <?php
 $json = $_POST['json'];
-var_dump(json_decode($json));
+$json_obj = json_decode($json, true);
+echo $json_obj['secretIdentity']['a'];
 ?>
