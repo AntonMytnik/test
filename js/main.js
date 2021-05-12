@@ -1,19 +1,20 @@
 $(document).ready(() => {
    console.log('Hello World');
    $('nav').click(() => {
-      console.log(writelorem());
+      writelorem();
    });
    function writelorem() {
       json_s = '{"name": "Molecule Man", "age": 29,"secretIdentity": "Dan Jukes"}';
       $.ajax({
          type: "POST",
-         data: { login: '1', password: '2' },
+         data: { json: json_s },
+         dataType: 'json',
          url: "test.php",
          success: function (msg) {
             alert(msg);
          },
          error: function (error) {
-            alert('error');
+            console.log(error);
          }
       });
    }
