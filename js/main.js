@@ -3,7 +3,7 @@ $(document).ready(() => {
       writelorem();
    });
    function writelorem() {
-      json_s = '{"name": "Jason", "age": 29,"secretIdentity": { "a": "123456", "b": "123456" } }';
+      json_s = '{"element":[{"name":"gold","price":"100"},{"name":"silver","price":"201"},{"name":"iron","price":"133"}]}';
       $.ajax({
          url: "test.php",
          type: "POST",
